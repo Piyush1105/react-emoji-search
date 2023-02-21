@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useState } from "react";
+import { EmojiPicker, Emoji } from "react-emoji-search";
+const App = () => {
+  const [emoji, setEmoji] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <EmojiPicker set="google" /> */}
+
+      {/* <EmojiPicker set="google" emojiSize={24} emojiSpacing={8} /> */}
+      {/* <EmojiPicker emojiVersion={12.0} /> */}
+      {/* <EmojiPicker onEmojiClick={(emoji) => setEmoji(emoji)} /> */}
+      <EmojiPicker
+        onEmojiClick={(emoji) => setEmoji(emoji)}
+        set="google"
+        styles={{
+          backgroundColor: "#2e4960",
+          indicatorColor: "#b04c2d",
+          fontColor: "lightgrey",
+          searchBackgroundColor: "#263d51",
+          tabsFontColor: "#8cdce4",
+          searchFontColor: "lightgrey",
+          skinTonePickerBackgroundColor: "#284155",
+        }}
+      />
+
+      <Emoji />
+      <Emoji unicode={emoji} set="google" size={50} />
     </div>
   );
-}
+};
 
 export default App;
