@@ -18,7 +18,7 @@ const App = () => {
           Color Mode {colorMode}
         </button>
         <Emoji unicode={emoji} set="google" size={50} />
-        <div style={{ height: 600, width: 700 }}>
+        <div style={{ maxHeight: 600, maxWidth: 700 }}>
           {/* <EmojiPicker set="google" /> */}
 
           {/* <EmojiPicker set="google" emojiSize={24} emojiSpacing={8} /> */}
