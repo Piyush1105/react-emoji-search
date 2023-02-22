@@ -17,8 +17,8 @@ const App = () => {
         >
           Color Mode {colorMode}
         </button>
-        <Emoji unicode={emoji} set="google" size={50} />
-        <div style={{ maxHeight: 600, maxWidth: 700 }}>
+        <Emoji unicode={emoji} set="google" size={50} quality="clean" />
+        <div style={{ maxHeight: 600, maxWidth: "max-content", padding: 10 }}>
           {/* <EmojiPicker set="google" /> */}
 
           {/* <EmojiPicker set="google" emojiSize={24} emojiSpacing={8} /> */}
@@ -28,6 +28,9 @@ const App = () => {
           <EmojiPicker
             onEmojiClick={(emoji) => setEmoji(emoji)}
             set="google"
+            tabsVariant="fullWidth"
+            quality="clean"
+            sheetSize={64}
             // styles={{
             //   backgroundColor: "#2e4960",
             //   indicatorColor: "#b04c2d",
